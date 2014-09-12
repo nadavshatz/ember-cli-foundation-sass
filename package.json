@@ -22,8 +22,5 @@
   "homepage": "https://github.com/artificialio/ember-cli-foundation-sass",
   "engines": {
     "node": ">= 0.10.0"
-  },
-  "dependencies": {
-    "broccoli-kitchen-sink-helpers": "^0.2.4"
   }
 }

@@ -1,6 +1,5 @@
 var fs   = require('fs');
 var path = require('path');
-var kitchen = require('broccoli-kitchen-sink-helpers');
 
 module.exports = {
   name: 'Ember CLI Foundation SASS',
@@ -12,13 +11,13 @@ module.exports = {
     if (emberCLIVersion < '0.0.44') {
       throw new Error('ember-cli-bootstrap-sass requires ember-cli version 0.0.44 or greater.\n');
     }
-    console.log(app);
-    console.log('--------');
-    console.log(app.options);
+    //console.log(app);
+    //console.log('--------');
+    //console.log(app.options);
 
-    var options         = app.options['ember-cli-bootstrap-sass'] || {};
-    var modulePath      = path.relative(app.project.root, __dirname);
-    var foundationPath   = app.bowerDirectory + '/foundation/scss';
+    //var options         = app.options['ember-cli-bootstrap-sass'] || {};
+    //var modulePath      = path.relative(app.project.root, __dirname);
+    //var foundationPath   = app.bowerDirectory + '/foundation/scss';
     //var emberBsPath     = 'vendor/ember-addons.bs_for_ember/dist'
     //var javascriptsPath = path.join(emberBsPath, 'js');
     //var jsFiles         = options.components ? options.components : fs.readdirSync(path.join(modulePath, javascriptsPath));
@@ -45,9 +44,9 @@ module.exports = {
     //app.import(path.join(bootstrapPath, 'fonts/bootstrap/glyphicons-halflings-regular.svg'), { destDir: '/fonts' });
     //app.import(path.join(bootstrapPath, 'fonts/bootstrap/glyphicons-halflings-regular.ttf'), { destDir: '/fonts' });
     //app.import(path.join(bootstrapPath, 'fonts/bootstrap/glyphicons-halflings-regular.woff'), { destDir: '/fonts' });
-    var sourceSettingsFile = path.join(foundationPath, 'foundation/_settings.scss');
-    var destSettingsFile = path.join(modulePath, 'app/styles/_settings.scss');
-    copyFile(sourceSettingsFile, destSettingsFile);
+    //var sourceSettingsFile = path.join(foundationPath, 'foundation/_settings.scss');
+    //var destSettingsFile = path.join(modulePath, 'app/styles/_settings.scss');
+    //copyFile(sourceSettingsFile, destSettingsFile);
   }
 };
 
