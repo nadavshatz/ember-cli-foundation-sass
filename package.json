@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "Include Foundation 5 SASS with optional JS into your Ember CLI application.",
   "author": "Markus Padourek",
-  "scripts": {
-    "postinstall": "bower install"
-  },
   "license": "MIT",
     "keywords": [
     "ember-addon",
