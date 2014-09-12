@@ -1,4 +1,4 @@
-# Foundation-sass
+# Ember CLI Foundation SASS Addon
 
 This README outlines the details of collaborating on this Ember addon.
 

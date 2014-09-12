@@ -2,37 +2,28 @@
   "name": "ember-cli-foundation-sass",
   "version": "0.1.0",
   "description": "Include Foundation 5 SASS with optional JS into your Ember CLI application.",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
+  "author": "Markus Padourek",
   "scripts": {
-    "start": "ember server",
-    "build": "ember build",
-    "test": "ember test"
+    "postinstall": "bower install"
   },
-  "repository": "https://github.com/artificialio/ember-cli-foundation-sass",
+  "license": "MIT",
+    "keywords": [
+    "ember-addon",
+    "foundation",
+    "sass"
+  ],
+  "ember-addon": {
+    "main": "index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/artificialio/ember-cli-foundation-sass"
+  },
+  "homepage": "https://github.com/artificialio/ember-cli-foundation-sass",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "body-parser": "^1.2.0",
-    "broccoli-asset-rev": "0.1.1",
-    "broccoli-ember-hbs-template-compiler": "^1.6.1",
-    "ember-cli": "0.0.44",
-    "ember-data": "1.0.0-beta.10",
-    "ember-cli-ic-ajax": "0.1.1",
-    "ember-cli-inject-live-reload": "^1.0.2",
-    "ember-cli-qunit": "0.1.0",
-    "express": "^4.8.5",
-    "glob": "^4.0.5"
-  },
-  "keywords": [
-    "ember-addon"
-  ],
-  "ember-addon": {
-    "configPath": "tests/dummy/config"
+  "dependencies": {
+    "broccoli-kitchen-sink-helpers": "^0.2.4"
   }
 }
