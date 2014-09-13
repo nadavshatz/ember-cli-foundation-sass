@@ -12,6 +12,7 @@ module.exports = {
       throw new Error('ember-cli-bootstrap-sass requires ember-cli version 0.0.44 or greater.\n');
     }
 
+    var options         = app.options['foundation-sass'] || {};
     var foundationJSPath = path.join(app.bowerDirectory, 'foundation', 'js', 'foundation');
 
     if (options.importFoundationJS) {
