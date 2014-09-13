@@ -20,5 +20,8 @@
   "license": "MIT",
   "engines": {
     "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "symlink-or-copy": "^1.0.0"
   }
 }
