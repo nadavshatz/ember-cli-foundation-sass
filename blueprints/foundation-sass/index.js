@@ -22,8 +22,8 @@ module.exports = {
 
 var copyFile = function(source, target) {
   //var cbCalled = false;
-
-  var input = fs.createReadStream(source);
+  fs.writeFileSync(target, fs.readFileSync(source));
+  /*var input = fs.createReadStream(source);
   input.on("error", function(err) {
     done(err);
   });
@@ -34,7 +34,7 @@ var copyFile = function(source, target) {
   output.on("close", function(ex) {
     done();
   });
-  input.pipe(output);
+  input.pipe(output);*/
   console.log('Writing done.');
   return true;
   //function done(err) {
