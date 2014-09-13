@@ -26,7 +26,14 @@ module.exports = {
     }
 
     if (options.foundationJs) {
-      app.import(path.join(foundationJSPath, 'foundation.js'));
+      if (typeof options.foundationJs == 'string' || options.foundationJs instanceof String) {
+        if (options.foundationJs === 'all') {
+          app.import(path.join(app.bowerDirectory, 'foundation', 'js', 'foundation.js'));
+        }
+      } else {
+        app.import(path.join(foundationJSPath, 'foundation.js'));
+      }
+
       if (options.foundationJs instanceof Array) {
         options.foundationJs.forEach(function(componentName) {
           app.import(path.join(foundationJSPath, 'foundation.' + componentName + '.js'));
