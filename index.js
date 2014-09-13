@@ -11,6 +11,19 @@ module.exports = {
     if (emberCLIVersion < '0.0.44') {
       throw new Error('ember-cli-bootstrap-sass requires ember-cli version 0.0.44 or greater.\n');
     }
+
+    var foundationJSPath = path.join(app.bowerDirectory, 'foundation', 'js', 'foundation');
+
+    if (options.importFoundationJS) {
+      console.log(options.importFoundationJS);
+      app.import(path.join(foundationJSPath, 'foundation.js'));
+      if (options.importFoundationJS instanceof Array) {
+        options.importFoundationJS.forEach(function(componentName) {
+          console.log(componentName);
+          app.import(path.join(foundationJSPath, 'foundation.' + componentName + '.js'));
+        });
+      }
+    }
     //console.log(app);
     //console.log('--------');
     //console.log(app.options);
