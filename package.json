@@ -22,6 +22,7 @@
     "node": ">= 0.10.0"
   },
   "dependencies": {
-    "symlink-or-copy": "^1.0.0"
+    "symlink-or-copy": "^1.0.0",
+    "rsvp": "^3.0.13"
   }
 }

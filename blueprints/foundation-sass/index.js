@@ -1,14 +1,13 @@
 var fs          = require('fs');
 var path        = require('path');
 var symlinkOrCopySync = require('symlink-or-copy').sync;
+var Promise   = require('../../lib/ext/promise');
 
 module.exports = {
   normalizeEntityName: function() {
   },
 
   beforeInstall: function(options) {
-    this.addPackageToProject('broccoli-sass', '~0.2.2');
-    this.addPackageToProject('broccoli-csso', '~1.0.0');
     return this.addBowerPackageToProject('foundation', '5.4.2');
   },
   afterInstall: function(options) {
@@ -27,6 +26,9 @@ module.exports = {
     if (!fs.existsSync(foundationDestPath)){
       symlinkOrCopySync(foundationSourcePath, foundationDestPath);
     }
-    return true;
+    return Promise.all([
+      this.addPackageToProject('broccoli-sass', '^0.2.2'),
+      this.addPackageToProject('broccoli-csso', '^1.0.0')
+    ]);
   }
 };
