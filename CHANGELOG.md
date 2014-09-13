@@ -2,6 +2,12 @@
 
 ### master
 
+### 0.2.0
+* [FEATURE] Added an option to include Foundation JS and dependencies easier.
+* [BUGFIX] Fixed installing of the npm dependencies through adding the `RSVP` library.
+
+### 0.1.1
+* [FEATURE] Added installing of npm dependencies `broccoli-sass` and `broccoli-csso` for the actual ember-cli project and not this addon
 
 ### 0.1.0
 
