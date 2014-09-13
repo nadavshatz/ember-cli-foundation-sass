@@ -10,7 +10,7 @@ Make sure you have bower installed with: `npm install bower -g`
 * `npm install ember-cli-foundation-sass --save-dev`
 * `ember g foundation-sass`
 
-The generator sets everything up and you should find everything in your `app/styles` folder. Just make sure you are importing the `_settings.scss` as well as the `foundation.scss`.
+The generator sets everything up and you should find everything in your `app/styles` folder. Just make sure you are importing the `_settings.scss` as well as the `foundation.scss` in your `app.scss`.
 
 This addon also adds an option to include the foundation JavaScript (and dependencies) more easily in the `Brocfile.js`:
 
