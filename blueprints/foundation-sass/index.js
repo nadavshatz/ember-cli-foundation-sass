@@ -11,7 +11,11 @@ module.exports = {
   afterInstall: function(options) {
     var foundationPath = path.join(process.cwd(), 'bower_components', 'foundation', 'scss');
     var stylePath = path.join(process.cwd(), 'app', 'styles');
-    copyFile(path.join(foundationPath, 'foundation', '_settings.scss'), path.join(stylePath, '_settings.scss'));
+    console.log(foundationPath);
+    var settingsPath = path.join(foundationPath, 'foundation', '_settings.scss');
+    console.log(settingsPath);
+    copyFile(settingsPath, path.join(stylePath, '_settings.scss'));
+    copyFile(foundationPath + '/normalize.scss', path.join(stylePath, '_test.scss'));
     return true;
   }
 };
@@ -32,7 +36,7 @@ var copyFile = function(source, target) {
   });
   input.pipe(output);
   console.log('Writing done.');
-
+  return true;
   //function done(err) {
   //  if (!cbCalled) {
   //    cb(err);
