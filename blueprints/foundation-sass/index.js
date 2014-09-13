@@ -14,6 +14,7 @@ module.exports = {
     console.log(options);
     console.log(stylePath);
     console.log(this);
+    console.log(this.bowerDirectory);
     return true;
   }
 };
