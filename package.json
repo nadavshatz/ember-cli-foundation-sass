@@ -22,6 +22,8 @@
     "node": ">= 0.10.0"
   },
   "dependencies": {
-    "symlink-or-copy": "^1.0.0"
+    "symlink-or-copy": "^1.0.0",
+    "broccoli-sass": "^0.2.2",
+    "broccoli-csso": "^1.0.0"
   }
 }
