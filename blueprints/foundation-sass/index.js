@@ -5,10 +5,10 @@ module.exports = {
   normalizeEntityName: function() {
   },
 
-  //beforeInstall: function(options) {
-  //  console.log(options);
-  //  return this.addBowerPackageToProject('foundation', 'zurb/bower-foundation#5.4.2');
-  //},
+  beforeInstall: function(options) {
+    console.log(options);
+    return this.addBowerPackageToProject('foundation', 'zurb/bower-foundation#5.4.2');
+  },
   afterInstall: function(options) {
     var appPath = path.join(process.cwd(), 'app', 'styles', 'app.css');
     console.log(options);
