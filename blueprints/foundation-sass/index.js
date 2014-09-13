@@ -7,6 +7,8 @@ module.exports = {
   },
 
   beforeInstall: function(options) {
+    this.addPackageToProject('broccoli-sass', '~0.2.2');
+    this.addPackageToProject('broccoli-csso', '~1.0.0');
     return this.addBowerPackageToProject('foundation', '5.4.2');
   },
   afterInstall: function(options) {
