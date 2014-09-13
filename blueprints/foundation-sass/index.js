@@ -7,9 +7,10 @@ module.exports = {
 
   beforeInstall: function(options) {
     console.log(options);
-    return this.addBowerPackageToProject('foundation', 'zurb/bower-foundation#5.4.2');
+    return this.addBowerPackageToProject('foundation', '5.4.2');
   },
   afterInstall: function(options) {
+    console.log('afterInstall');
     var appPath = path.join(process.cwd(), 'app', 'styles', 'app.css');
     console.log(options);
     console.log(appPath);
