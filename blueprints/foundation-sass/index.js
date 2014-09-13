@@ -22,7 +22,7 @@ module.exports = {
     //symlinking foundation sass styles to app dir, so we don't have to mess with file paths
     var foundationSourcePath = path.join(foundationPath, 'foundation');
     var foundationDestPath = path.join(stylePath, 'foundation');
-    if (!fs.existsSync(destBootstrapSourcePath)){
+    if (!fs.existsSync(foundationDestPath)){
       symlinkOrCopySync(foundationSourcePath, foundationDestPath);
     }
     return true;
