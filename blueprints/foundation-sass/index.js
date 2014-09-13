@@ -6,14 +6,14 @@ module.exports = {
   },
 
   beforeInstall: function(options) {
-    console.log(options);
     return this.addBowerPackageToProject('foundation', '5.4.2');
   },
   afterInstall: function(options) {
-    console.log('afterInstall');
-    var appPath = path.join(process.cwd(), 'app', 'styles', 'app.css');
+    var foundationPath = path.join(process.cwd(), 'bower_components', 'styles');
+    var stylePath = path.join(process.cwd(), 'app', 'styles');
     console.log(options);
     console.log(appPath);
+    console.log(this);
     return true;
   }
 };
