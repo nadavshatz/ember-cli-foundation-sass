@@ -3,20 +3,21 @@
   "version": "0.1.0",
   "description": "Include Foundation 5 SASS with optional JS into your Ember CLI application.",
   "author": "Markus Padourek",
-  "license": "MIT",
-    "keywords": [
+  "main": "index.js",
+  "ember-addon": {
+    "main": "index"
+  },
+  "keywords": [
     "ember-addon",
     "foundation",
     "sass"
   ],
-  "ember-addon": {
-    "main": "index"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/artificialio/ember-cli-foundation-sass"
   },
   "homepage": "https://github.com/artificialio/ember-cli-foundation-sass",
+  "license": "MIT",
   "engines": {
     "node": ">= 0.10.0"
   }
