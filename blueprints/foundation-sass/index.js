@@ -16,6 +16,8 @@ module.exports = {
     console.log(settingsPath);
     copyFile(settingsPath, path.join(stylePath, '_settings.scss'));
     copyFile(foundationPath + '/normalize.scss', path.join(stylePath, '_test.scss'));
+
+    fs.writeFileSync(path.join(stylePath, '_test-new.scss'),  "bluuuub");
     return true;
   }
 };
