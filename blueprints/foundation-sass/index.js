@@ -12,7 +12,7 @@ module.exports = {
     var foundationPath = path.join(process.cwd(), 'bower_components', 'styles');
     var stylePath = path.join(process.cwd(), 'app', 'styles');
     console.log(options);
-    console.log(appPath);
+    console.log(stylePath);
     console.log(this);
     return true;
   }
