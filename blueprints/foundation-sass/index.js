@@ -9,12 +9,9 @@ module.exports = {
     return this.addBowerPackageToProject('foundation', '5.4.2');
   },
   afterInstall: function(options) {
-    var foundationPath = path.join(process.cwd(), 'bower_components', 'styles');
+    var foundationPath = path.join(process.cwd(), 'bower_components', 'foundation', 'scss');
     var stylePath = path.join(process.cwd(), 'app', 'styles');
-    console.log(options);
-    console.log(stylePath);
-    console.log(this);
-    console.log(this.bowerDirectory);
+    copyFile(path.join(foundationPath, 'foundation', '_settings.scss'), path.join(stylePath, '_settings.scss'));
     return true;
   }
 };
@@ -34,6 +31,7 @@ var copyFile = function(source, target) {
     done();
   });
   input.pipe(output);
+  console.log('Writing done.');
 
   //function done(err) {
   //  if (!cbCalled) {
