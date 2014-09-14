@@ -2,6 +2,9 @@
 
 ### master
 
+### 0.3.1
+* [BUGFIX] Added .gitignore file for symlinked `foundation` folder.
+
 ### 0.3.0
 * [FEATURE] Added default `app.scss` which imports foundation.
 
