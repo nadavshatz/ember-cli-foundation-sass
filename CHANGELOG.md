@@ -2,6 +2,9 @@
 
 ### master
 
+### 0.3.0
+* [FEATURE] Added default `app.scss` which imports foundation.
+
 ### 0.2.0
 * [FEATURE] Added an option to include Foundation JS and dependencies easier.
 * [BUGFIX] Fixed installing of the npm dependencies through adding the `RSVP` library.
