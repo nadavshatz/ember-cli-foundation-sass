@@ -1,20 +1,23 @@
 # Ember CLI Foundation SASS Addon
 
-This addon includes **Foundation 5.4.2 SASS**, symlinks the bower folder and copies the settings as well as the main file over, so you can immediately customise everything.
-The addon also installs [broccoli-sass](https://github.com/joliss/broccoli-sass), as well as [broccoli-csso](https://github.com/sindresorhus/broccoli-csso) as dependencies.
-
-Make sure you have bower installed with: `npm install bower -g`
+This addon extremely simplifies and automates the steps to include [Foundation 5.4.2 SASS](https://github.com/zurb/foundation) into your ember-cli project and customize it completely to your needs.
 
 ## Usage
 
 * `npm install ember-cli-foundation-sass --save-dev`
 * `ember g foundation-sass`
 
-The generator sets everything up and you should find everything in your `app/styles` folder. Just make sure you are importing the `_settings.scss` as well as the `foundation.scss` in your `app.scss`.
+The generator then installs **Foundation 5.4.2** via Bower, copies over the `_settings.scss` as well as the `foundation.scss` into your `app/styles` folder so you can completely customize Foundation and just include the modules you need. Furthermore it symlinks the foundation sass folder (in bower_components) to your styles folder, so you don't have to change any of the imports.
 
-This addon also adds an option to include the foundation JavaScript (and dependencies) more easily in the `Brocfile.js`:
+It also provides a default `app.scss` that already includes the `_settings.scss` as well as teh `_foundation.scss`.
+
+Lastly it installs [broccoli-sass](https://github.com/joliss/broccoli-sass) and [broccoli-csso](https://github.com/sindresorhus/broccoli-csso) purely for convenience.
+
+### Options
+This addon also simplifies adding the Foundation JavaScript (and dependencies) in the `Brocfile.js`:
 
 ```js
+//Brocfile.js
 var app = new EmberApp({
   'foundation-sass': {
     'modernizr': true, //includes modernizer
