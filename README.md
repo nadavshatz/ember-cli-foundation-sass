@@ -16,6 +16,8 @@ It will try to overwrite the default ember-cli `.gitignore` to add the symlinked
 Lastly it installs [broccoli-sass](https://github.com/joliss/broccoli-sass) and [broccoli-csso](https://github.com/sindresorhus/broccoli-csso) purely for convenience.
 
 ### Options
+Run `ember g foundation-link` when you clone an existing project with this addon and just need to set up the right symbolic link.
+
 This addon also simplifies adding the Foundation JavaScript (and dependencies) in the `Brocfile.js`:
 
 ```js

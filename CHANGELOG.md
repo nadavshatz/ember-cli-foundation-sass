@@ -2,6 +2,9 @@
 
 ### master
 
+### 0.3.2
+* [BUGFIX] Added `foundation-link` generator for when you clone an existing project and need to create the symlink the first time.
+
 ### 0.3.1
 * [BUGFIX] Added .gitignore file for symlinked `foundation` folder.
 
