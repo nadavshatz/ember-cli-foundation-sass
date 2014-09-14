@@ -11,6 +11,8 @@ This installs **Foundation 5.4.2** via Bower, copies over `_settings.scss` as we
 
 It also provides a default `app.scss` that includes the `_settings.scss` as well as the `_foundation.scss` for you.
 
+It will try to overwrite the default ember-cli `.gitignore` to add the symlinked `foundation` folder. If you don't want that file to be overrided, do at that folder manually.
+
 Lastly it installs [broccoli-sass](https://github.com/joliss/broccoli-sass) and [broccoli-csso](https://github.com/sindresorhus/broccoli-csso) purely for convenience.
 
 ### Options
