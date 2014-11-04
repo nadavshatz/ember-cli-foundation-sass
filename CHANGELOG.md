@@ -2,6 +2,9 @@
 
 ### master
 
+### 0.4.1
+* [BUGFIX] Make sure custom ember-cli-sass settings in the Brocfile are not getting overwritten.
+
 ### 0.4.0
 * [BREAKING ENHANCEMENT] Using addPackagesToProject syntax which requires **ember-cli >= 0.1.2**.
 * [BRAKING ENHANCEMENT] Switched to `ember-cli-sass`, which should fix or at least improve [#1](https://github.com/artificialio/ember-cli-foundation-sass/issues/1)

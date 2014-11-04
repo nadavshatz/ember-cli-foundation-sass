@@ -42,10 +42,12 @@ module.exports = {
       }
     }
 
-    app.options['sassOptions'] = {
-      includePaths: [
-        'bower_components/foundation/scss'
-      ]
-    };
+    //Make sure the ember-cli-sass options are set/appended in the right way (and not just overwriting)
+    if(app.options['sassOptions'] && app.options['sassOptions']['includePaths']) {
+      app.options['sassOptions']['includePaths'].push('bower_components/foundation/scss');
+    } else {
+      app.options['sassOptions'] = app.options['sassOptions'] || {};
+      app.options['sassOptions']['includePaths'] = ['bower_components/foundation/scss'];
+    }
   }
 };
