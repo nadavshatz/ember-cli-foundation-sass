@@ -2,6 +2,12 @@
 
 ### master
 
+### 0.4.0
+* [BREAKING ENHANCEMENT] Using addPackagesToProject syntax which requires **ember-cli >= 0.1.2**.
+* [BRAKING ENHANCEMENT] Switched to `ember-cli-sass`, which should fix or at least improve [#1](https://github.com/artificialio/ember-cli-foundation-sass/issues/1)
+* [BRAKING ENHANCEMENT] Switched to `broccoli-clean-css`, since it generally seems to minify better: [CSSO vs clean-css](http://goalsmashers.github.io/css-minification-benchmark/)
+* [BREAKING FEATURE] Removed `foundation-link` generator, since `ember-cli-sass` removes the need for symlinking.
+
 ### 0.3.3
 * [ENHANCEMENT] Updated foundation to use `~5.4.7` and broccoli-sass to `^0.3.2`.
 

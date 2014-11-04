@@ -8,8 +8,8 @@ module.exports = {
     this._super.included(app);
     //this.app.import(app.bowerDirectory);
     var emberCLIVersion = app.project.emberCLIVersion();
-    if (emberCLIVersion < '0.0.44') {
-      throw new Error('ember-cli-bootstrap-sass requires ember-cli version 0.0.44 or greater.\n');
+    if (emberCLIVersion < '0.1.2') {
+      throw new Error('ember-cli-foundation-sass requires ember-cli version 0.1.2 or greater.\n');
     }
 
     var options         = app.options['foundation-sass'] || {};
@@ -25,6 +25,7 @@ module.exports = {
       app.import(path.join(fastclickPath, 'fastclick.js'));
     }
 
+    //Includes the foundation js depending on the given option 'all', true, ['topbar']
     if (options.foundationJs) {
       if (typeof options.foundationJs == 'string' || options.foundationJs instanceof String) {
         if (options.foundationJs === 'all') {
@@ -40,5 +41,11 @@ module.exports = {
         });
       }
     }
+
+    app.options['sassOptions'] = {
+      includePaths: [
+        'bower_components/foundation/scss'
+      ]
+    };
   }
 };

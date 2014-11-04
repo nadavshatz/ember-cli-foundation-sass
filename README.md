@@ -1,48 +1,48 @@
 # Ember CLI Foundation SASS Addon
+**Requires at least ember-cli v0.1.2**  
+*If you want to use it with ember-cli >=0.0.44, use v0.3.3 of the addon.*
 
-This addon extremely simplifies and automates the steps to include [Foundation 5.4.7 SASS](https://github.com/zurb/foundation) into your ember-cli project and to customize it completely to your needs.
+This addon automates the steps to include SASS with [Foundation 5.4.7](https://github.com/zurb/foundation) into your ember-cli using [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) as well as simplifying the customization of the settings and which components you want to include.
 
-**This addon works with ember-cli v0.0.44 and later.**
+It also installs [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-css), purely for convinience since it gernally seems to lead to the best minifiaction results: http://goalsmashers.github.io/css-minification-benchmark/.
 
 ## Usage
 
 * `npm install ember-cli-foundation-sass --save-dev`
 * `ember g foundation-sass`
 
-This installs **Foundation 5.4.2** via Bower, copies over `_settings.scss` as well as the `foundation.scss` files into your `app/styles` folder so you can customize Foundation and just include the modules you need. Furthermore it symlinks the foundation sass folder (from bower_components) to your styles folder, so you don't have to change any of the import statements.
+Running the blueprint installs **Foundation 5.4.7** via Bower, copies over the `_settings.scss` as well as the `foundation.scss` to your `app/styles` folder.
+It also creates a default `app.scss` that imports the `_settings.scss` as well as the `_foundation.scss`, so you can get serve the app immediately. Lastly, it installs the already mentioned dependencies [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) and [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-css).
 
-It also provides a default `app.scss` that includes the `_settings.scss` as well as the `_foundation.scss` for you.
+This setup is made so you don't have to worry about how to how to be able to customize Foundation, but just lets you do it. Furthermore [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) helps that the foundation `import` statements (in the `_foundation.scss`) 'just' work.
 
-It will try to overwrite the default ember-cli `.gitignore` to add the symlinked `foundation` folder. If you don't want that file to be overrided, do at that folder manually.
-
-Lastly it installs [broccoli-sass](https://github.com/joliss/broccoli-sass) and [broccoli-csso](https://github.com/sindresorhus/broccoli-csso) purely for convenience.
 
 ### Options
-Run `ember g foundation-link` when you clone an existing project with this addon and just need to set up the right symbolic link.
 
-This addon also simplifies adding the Foundation JavaScript (and dependencies) in the `Brocfile.js`:
+This addon provides an API to simplify adding the Foundation JavaScript modules and dependencies:
 
 ```js
 //Brocfile.js
+//Includes modernizr, fastclick and the full foundation.js with all modules
 var app = new EmberApp({
   'foundation-sass': {
-    'modernizr': true, //includes modernizer
-    'fastclick': true, //includes fastclick
-    'foundationJs': 'all' //Includes the full foundation.js with all modules
+    'modernizr': true,
+    'fastclick': true,
+    'foundationJs': 'all'
   }
 });
 
-
-var app = new EmberApp({
-  'foundation-sass': {
-    'foundationJs': true //Includes just the core foundation.js without any modules
-  }
-});
-
+//Includes the core foundation.js with the tab, topbar, orbit and dropdown module
 var app = new EmberApp({
   'foundation-sass': {
     'foundationJs': ['tab', 'topbar', 'orbit', 'drodpdown']
-    //Includes just the core foundation.js with the tab, topbar, orbut and dropdown module
+  }
+});
+
+//Includes just the core foundation.js without any modules
+var app = new EmberApp({
+  'foundation-sass': {
+    'foundationJs': true
   }
 });
 ```
