@@ -8,7 +8,7 @@ module.exports = {
   },
 
   beforeInstall: function(options) {
-    return this.addBowerPackageToProject('foundation', '5.4.2');
+    return this.addBowerPackageToProject('foundation', '~5.4.7');
   },
   afterInstall: function(options) {
     //copying over the foundation.scss and _settings.scss to make foundation customization easy
@@ -27,7 +27,7 @@ module.exports = {
       symlinkOrCopySync(foundationSourcePath, foundationDestPath);
     }
     return Promise.all([
-      this.addPackageToProject('broccoli-sass', '^0.2.2'),
+      this.addPackageToProject('broccoli-sass', '^0.3.2'),
       this.addPackageToProject('broccoli-csso', '^1.0.0')
     ]);
   }

@@ -2,6 +2,9 @@
 
 ### master
 
+### 0.3.3
+* [ENHANCEMENT] Updated foundation to use `~5.4.7` and broccoli-sass to `^0.3.2`.
+
 ### 0.3.2
 * [BUGFIX] Added `foundation-link` generator for when you clone an existing project and need to create the symlink the first time.
 

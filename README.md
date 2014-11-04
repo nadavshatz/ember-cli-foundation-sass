@@ -1,6 +1,6 @@
 # Ember CLI Foundation SASS Addon
 
-This addon extremely simplifies and automates the steps to include [Foundation 5.4.2 SASS](https://github.com/zurb/foundation) into your ember-cli project and to customize it completely to your needs.
+This addon extremely simplifies and automates the steps to include [Foundation 5.4.7 SASS](https://github.com/zurb/foundation) into your ember-cli project and to customize it completely to your needs.
 
 ## Usage
 
