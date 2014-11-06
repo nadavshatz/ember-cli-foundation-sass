@@ -16,8 +16,13 @@ module.exports = {
     var mainPath = path.join(foundationPath, 'foundation.scss');
     var _this = this;
 
-    fs.writeFileSync(path.join(stylePath, '_settings.scss'), fs.readFileSync(settingsPath));
-    fs.writeFileSync(path.join(stylePath, '_foundation.scss'), fs.readFileSync(mainPath));
+    if (!fs.existsSync(path.join(stylePath, '_settings.scss'))) {
+      fs.writeFileSync(path.join(stylePath, '_settings.scss'), fs.readFileSync(settingsPath));
+    }
+
+    if (!fs.existsSync(path.join(stylePath, '_foundation.scss'))) {
+      fs.writeFileSync(path.join(stylePath, '_foundation.scss'), fs.readFileSync(mainPath));
+    }
 
     return this.addPackagesToProject([
       { name: 'ember-cli-sass', target: '~3.0.3'},
