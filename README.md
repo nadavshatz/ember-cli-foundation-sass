@@ -10,6 +10,7 @@ It also installs [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-c
 
 * `npm install ember-cli-foundation-sass --save-dev`
 * `ember g foundation-sass`
+* If you clone an existing project with this addon, just run `npm i && bower i`.
 
 Running the blueprint installs **Foundation 5.4.7** via Bower, copies over the `_settings.scss` as well as the `foundation.scss` to your `app/styles` folder.
 It also creates a default `app.scss` that imports the `_settings.scss` as well as the `_foundation.scss`, so you can get serve the app immediately. Lastly, it installs the already mentioned dependencies [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) and [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-css).
