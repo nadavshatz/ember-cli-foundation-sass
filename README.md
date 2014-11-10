@@ -47,3 +47,14 @@ var app = new EmberApp({
   }
 });
 ```
+
+Whenever you use any foundation JS module in your code, make sure that view/component includes the following:
+```js
+import Ember from 'ember';
+
+export default Ember.View.extend({ //or Ember.Component.extend
+  didInsertElement: function() {
+    this.$().foundation();
+  }
+});
+```
