@@ -36,7 +36,7 @@ var app = new EmberApp({
 //Includes the core foundation.js with the tab, topbar, orbit and dropdown module
 var app = new EmberApp({
   'foundation-sass': {
-    'foundationJs': ['tab', 'topbar', 'orbit', 'drodpdown']
+    'foundationJs': ['tab', 'topbar', 'orbit', 'dropdown']
   }
 });
 
