@@ -6,7 +6,7 @@ module.exports = {
   },
 
   beforeInstall: function(options) {
-    return this.addBowerPackageToProject('foundation', '~5.4.7');
+    return this.addBowerPackageToProject('foundation', '~5.5.0');
   },
   afterInstall: function(options) {
     //copying over the foundation.scss and _settings.scss to make foundation customization easy
