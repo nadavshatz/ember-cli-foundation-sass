@@ -12,10 +12,14 @@ module.exports = {
       throw new Error('ember-cli-foundation-sass requires ember-cli version 0.1.2 or greater.\n');
     }
 
-    var options         = app.options['foundation-sass'] || {};
+    if (app.options['foundation-sass']) {
+      throw new Error('Using "foundation-sass" in your Brocfile is deprecated.  Please use "ember-cli-foundation-sass" instead.');
+    }
+
+    var options          = app.options['ember-cli-foundation-sass'] || {};
     var foundationJSPath = path.join(app.bowerDirectory, 'foundation', 'js', 'foundation');
-    var modernizrPath = path.join(app.bowerDirectory, 'modernizr');
-    var fastclickPath = path.join(app.bowerDirectory, 'fastclick', 'lib');
+    var modernizrPath    = path.join(app.bowerDirectory, 'modernizr');
+    var fastclickPath    = path.join(app.bowerDirectory, 'fastclick', 'lib');
 
     if (options.modernizr) {
       app.import(path.join(modernizrPath, 'modernizr.js'));
