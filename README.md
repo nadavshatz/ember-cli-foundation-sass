@@ -9,7 +9,7 @@ It also installs [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-c
 ## Usage
 
 * `npm install ember-cli-foundation-sass --save-dev`
-* `ember g foundation-sass`
+* `ember g ember-cli-foundation-sass`
 * If you clone an existing project with this addon, just run `npm i && bower i`.
 
 Running the blueprint installs **Foundation 5.4.7** via Bower, copies over the `_settings.scss` as well as the `foundation.scss` to your `app/styles` folder.
@@ -26,7 +26,7 @@ This addon provides an API to simplify adding the Foundation JavaScript modules 
 //Brocfile.js
 //Includes modernizr, fastclick and the full foundation.js with all modules
 var app = new EmberApp({
-  'foundation-sass': {
+  'ember-cli-foundation-sass': {
     'modernizr': true,
     'fastclick': true,
     'foundationJs': 'all'
@@ -35,14 +35,14 @@ var app = new EmberApp({
 
 //Includes the core foundation.js with the tab, topbar, orbit and dropdown module
 var app = new EmberApp({
-  'foundation-sass': {
+  'ember-cli-foundation-sass': {
     'foundationJs': ['tab', 'topbar', 'orbit', 'dropdown']
   }
 });
 
 //Includes just the core foundation.js without any modules
 var app = new EmberApp({
-  'foundation-sass': {
+  'ember-cli-foundation-sass': {
     'foundationJs': true
   }
 });
