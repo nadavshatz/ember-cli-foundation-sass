@@ -2,6 +2,10 @@
 
 ### master
 
+### 1.0.0
+* [BUGFIX] Fixed for latest ember-cli 0.1.11
+* [BUGFIX] Fixed that new `ember addon:install` command works properly
+
 ### 0.4.1
 * [BUGFIX] Make sure custom ember-cli-sass settings in the Brocfile are not getting overwritten.
 
