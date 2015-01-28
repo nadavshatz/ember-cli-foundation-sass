@@ -1,5 +1,6 @@
 var fs   = require('fs');
 var path = require('path');
+var semver = require('semver');
 
 module.exports = {
   name: 'Ember CLI Foundation SASS',
@@ -8,7 +9,7 @@ module.exports = {
     this._super.included(app);
     //this.app.import(app.bowerDirectory);
     var emberCLIVersion = app.project.emberCLIVersion();
-    if (emberCLIVersion < '0.1.2') {
+    if (semver.lt(emberCLIVersion, '0.1.2')) {
       throw new Error('ember-cli-foundation-sass requires ember-cli version 0.1.2 or greater.\n');
     }
 

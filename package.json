@@ -23,5 +23,8 @@
   "license": "MIT",
   "engines": {
     "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "semver": "^4.2.0"
   }
 }
