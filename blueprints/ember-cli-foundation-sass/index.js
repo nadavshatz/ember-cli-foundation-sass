@@ -20,8 +20,8 @@ module.exports = {
     fs.writeFileSync(path.join(stylePath, '_foundation.scss'), fs.readFileSync(mainPath));
 
     return this.addPackagesToProject([
-      { name: 'ember-cli-sass', target: '~3.0.3'},
-      { name: 'broccoli-clean-css', target: '^0.3.0' }
+      { name: 'ember-cli-sass', target: '~3.1.0-beta.5'},
+      { name: 'broccoli-clean-css', target: '~1.0.0' }
     ]);
   }
 };
