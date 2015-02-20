@@ -7,13 +7,15 @@ This addon automates the steps to include SASS with [Foundation 5.5.0](https://g
 It also installs [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-css), purely for convenience since it generally seems to lead to the best minification results: http://goalsmashers.github.io/css-minification-benchmark/.
 
 ## Usage
+### Installation
 * `ember install:addon ember-cli-foundation-sass`
 
-## Usage (ember-cli < 0.1.5)
+### Installation (ember-cli < 0.1.5)
 * `npm install ember-cli-foundation-sass --save-dev`
 * `ember g ember-cli-foundation-sass`
 * If you clone an existing project with this addon, just run `npm i && bower i`.
 
+### What It Does
 Running the blueprint installs **Foundation 5.5.0** via Bower, copies over the `_settings.scss` as well as the `foundation.scss` to your `app/styles` folder.
 It also creates a default `app.scss` that imports the `_settings.scss` as well as the `_foundation.scss`, so you can serve the app immediately. Lastly, it installs the already mentioned dependencies [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) and [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-css).
 
