@@ -1,18 +1,20 @@
 # Ember CLI Foundation SASS Addon
-**Requires at least ember-cli v0.1.2**  
+**Requires at least ember-cli v0.1.2**
 *If you want to use it with ember-cli >=0.0.44, use v0.3.3 of the addon.*
 
-This addon automates the steps to include SASS with [Foundation 5.4.7](https://github.com/zurb/foundation) into your ember-cli app using [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) as well as simplifying the customization of the settings and which components you want to include.
+This addon automates the steps to include SASS with [Foundation 5.5.0](https://github.com/zurb/foundation) into your ember-cli app using [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) as well as simplifying the customization of the settings and which components you want to include.
 
 It also installs [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-css), purely for convenience since it generally seems to lead to the best minification results: http://goalsmashers.github.io/css-minification-benchmark/.
 
 ## Usage
+* `ember install:addon ember-cli-foundation-sass`
 
+## Usage (ember-cli < 0.1.5)
 * `npm install ember-cli-foundation-sass --save-dev`
 * `ember g ember-cli-foundation-sass`
 * If you clone an existing project with this addon, just run `npm i && bower i`.
 
-Running the blueprint installs **Foundation 5.4.7** via Bower, copies over the `_settings.scss` as well as the `foundation.scss` to your `app/styles` folder.
+Running the blueprint installs **Foundation 5.5.0** via Bower, copies over the `_settings.scss` as well as the `foundation.scss` to your `app/styles` folder.
 It also creates a default `app.scss` that imports the `_settings.scss` as well as the `_foundation.scss`, so you can serve the app immediately. Lastly, it installs the already mentioned dependencies [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) and [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-css).
 
 This setup is made so you don't have to worry about how to customize Foundation, but just lets you do it. Furthermore [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) helps that the foundation `import` statements (in the `_foundation.scss`) 'just' work.
