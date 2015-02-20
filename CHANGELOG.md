@@ -2,6 +2,8 @@
 
 ### master
 
+* [BUGFIX] Fixed for ember-cli >= 0.2.0
+
 ### 1.0.0
 * [BUGFIX] Fixed for latest ember-cli 0.1.11
 * [BUGFIX] Fixed that new `ember addon:install` command works properly
