@@ -13,6 +13,17 @@ module.exports = {
       throw new Error('ember-cli-foundation-sass requires ember-cli version 0.1.2 or greater.\n');
     }
 
+    if (semver.lt(emberCLIVersion, '0.2.0')) {
+      //Using old form to add sassOptions for old ember-clis
+      //Make sure the ember-cli-sass options are set/appended in the right way (and not just overwriting)
+      if(app.options['sassOptions'] && app.options['sassOptions']['includePaths']) {
+        app.options['sassOptions']['includePaths'].push('bower_components/foundation/scss');
+      } else {
+        app.options['sassOptions'] = app.options['sassOptions'] || {};
+        app.options['sassOptions']['includePaths'] = ['bower_components/foundation/scss'];
+      }
+    }
+
     if (app.options['foundation-sass']) {
       throw new Error('Using "foundation-sass" in your Brocfile is deprecated.  Please use "ember-cli-foundation-sass" instead.');
     }
@@ -45,14 +56,6 @@ module.exports = {
           app.import(path.join(foundationJSPath, 'foundation.' + componentName + '.js'));
         });
       }
-    }
-
-    //Make sure the ember-cli-sass options are set/appended in the right way (and not just overwriting)
-    if(app.options['sassOptions'] && app.options['sassOptions']['includePaths']) {
-      app.options['sassOptions']['includePaths'].push('bower_components/foundation/scss');
-    } else {
-      app.options['sassOptions'] = app.options['sassOptions'] || {};
-      app.options['sassOptions']['includePaths'] = ['bower_components/foundation/scss'];
     }
   }
 };
