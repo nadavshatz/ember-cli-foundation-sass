@@ -2,6 +2,10 @@
 
 ### master
 
+### 1.0.1
+* [ENHANCEMENT] Bump ember-cli-sass version for iojs support
+* [ENHANCEMENT] Bump broccoli-clean-css version to 1.0.0
+
 ### 1.0.0
 * [BUGFIX] Fixed for latest ember-cli 0.1.11
 * [BUGFIX] Fixed that new `ember addon:install` command works properly
