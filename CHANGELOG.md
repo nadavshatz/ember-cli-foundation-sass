@@ -2,6 +2,9 @@
 
 ### master
 
+### 1.1.0
+* [BUGFIX] Fixed for ember-cli >= 0.2.0, while compatibility should for older versions should remain
+
 ### 1.0.1
 * [ENHANCEMENT] Bump ember-cli-sass version for iojs support
 * [ENHANCEMENT] Bump broccoli-clean-css version to 1.0.0
