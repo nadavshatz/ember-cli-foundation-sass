@@ -2,6 +2,9 @@
 
 ### master
 
+### 1.1.1
+* [BUGFIX] Lock ember-cli-sass to 3.1.0 to get working libsass.
+
 ### 1.1.0
 * [BUGFIX] Fixed for ember-cli >= 0.2.0, while compatibility should for older versions should remain
 
