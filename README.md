@@ -8,7 +8,7 @@ It also installs [broccoli-clean-css](https://github.com/shinnn/broccoli-clean-c
 
 ## Usage
 ### Installation
-* `ember install:addon ember-cli-foundation-sass`
+* `ember install ember-cli-foundation-sass`
 
 ### Installation (ember-cli < 0.1.5)
 * `npm install ember-cli-foundation-sass --save-dev`
