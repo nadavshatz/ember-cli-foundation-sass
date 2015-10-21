@@ -1,3 +1,6 @@
+# Repo currently unmaintained!
+Due to lack of time, we are currently unable to maintain this project. We are, however, happy to continue accepting pull requests.
+
 # Ember CLI Foundation SASS Addon
 **Requires at least ember-cli v0.1.2**
 *If you want to use it with ember-cli >=0.0.44, use v0.3.3 of the addon.*
