@@ -1,8 +1,12 @@
 # Repo currently unmaintained!
 Due to lack of time, we are currently unable to maintain this project. We are, however, happy to continue accepting pull requests.
 
+### Especially welcome:
+- Tests
+
 # Ember CLI Foundation SASS Addon
-**Requires at least ember-cli v0.1.2**
+**Tested against ember-cli > v2.0.0**
+*If you want to use it with ember-cli >=0.1.2, use v1.2.0 of the addon.*
 *If you want to use it with ember-cli >=0.0.44, use v0.3.3 of the addon.*
 
 This addon automates the steps to include SASS with [Foundation 5.5.0](https://github.com/zurb/foundation) into your ember-cli app using [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) as well as simplifying the customization of the settings and which components you want to include.
