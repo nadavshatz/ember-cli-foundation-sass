@@ -3,11 +3,21 @@ var path = require('path');
 var semver = require('semver');
 
 module.exports = {
-  name: 'Ember CLI Foundation SASS',
+  name: 'ember-cli-foundation-sass',
 
-  included: function(app) {
-    this._super.included(app);
-    //this.app.import(app.bowerDirectory);
+  included(app) {
+    this._super.included.apply(this, arguments);
+
+    if(!app.options['sassOptions']) {
+      app.options['sassOptions'] = {};
+    }
+
+    if(!app.options['sassOptions'].includePaths) {
+      app.options['sassOptions'].includePaths = [];
+    }
+
+    app.options['sassOptions'].includePaths.push('bower_components/foundation/scss');
+
     var emberCLIVersion = app.project.emberCLIVersion();
     if (semver.lt(emberCLIVersion, '0.1.2')) {
       throw new Error('ember-cli-foundation-sass requires ember-cli version 0.1.2 or greater.\n');

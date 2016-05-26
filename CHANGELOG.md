@@ -2,6 +2,10 @@
 
 ### master
 
+### 2.0.0
+* [BUGFIX] Fix for #32.
+* [ENHANCEMENT] Updated structure to recent ember addon structure.
+
 ### 1.2.0
 * Include all PR's merged since last release.
 
